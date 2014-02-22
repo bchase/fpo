@@ -75,6 +75,6 @@ private
 
   def prepare_card
     p = params.require(:deck_id, :line_num)
-    @card = Card.new front: @card.deck.text.line(p[:line_num])
+    @card = Card.new front: @card.deck.text.hanzi_line(p[:line_num])
   end
 end
