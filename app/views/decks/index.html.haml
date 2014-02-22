@@ -6,13 +6,13 @@
 %table.table.table-striped
   %thead
     %tr
-      %th= model_class.human_attribute_name(:id)
+      %th Name
       %th= model_class.human_attribute_name(:created_at)
       %th=t '.actions', :default => t("helpers.actions")
   %tbody
     - @decks.each do |deck|
       %tr
-        %td= link_to deck.id, deck_path(deck)
+        %td= link_to deck.text.name, deck_path(deck)
         %td=l deck.created_at
         %td
           = link_to t('.edit', :default => t("helpers.links.edit")), edit_deck_path(deck), :class => 'btn btn-mini'
