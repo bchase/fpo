@@ -1,8 +1,6 @@
 Entry
 
 Deck
-  Card
-    Word # has_many :entries
-      TargetWord
-      GlossWord
-      # or just use Word#target ?
+  Text # name, episode, artist, raw
+  Card # has_many :entries
+    Phrase # target:boolean (else gloss)

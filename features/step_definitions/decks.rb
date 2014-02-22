@@ -1,8 +1,8 @@
 Given(/^I visit the new Deck page$/) do
-  pending # express the regexp above with the code you wish you had
+  visit new_deck_path
 end
 
-Given(/^I select "(.*?)" from "(.*?)"$/) do |arg1, arg2|
+Given(/^I select "(.*?)" from "(.*?)"$/) do |item, dropdown|
   pending # express the regexp above with the code you wish you had
 end
 
