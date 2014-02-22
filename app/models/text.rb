@@ -12,7 +12,7 @@ class Text < ActiveRecord::Base
 
   def raw_arr
     raw.split("\n").map do |str|
-      Text::String.new str
+      Text::String.new str.chomp
     end
   end
 
