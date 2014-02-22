@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Front:
+  = @card.front
+%p
+  %b Back:
+  = @card.back
+%p
+  %b Deck:
+  = @card.deck
+
+= link_to 'Edit', edit_card_path(@card)
+\|
+= link_to 'Back', cards_path

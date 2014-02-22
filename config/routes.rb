@@ -3,6 +3,9 @@ Rails.application.routes.draw do
 
   devise_for :users
 
-  resources :decks
+  resources :decks do
+    resources :cards
+  end
+
   # resources :texts
 end
