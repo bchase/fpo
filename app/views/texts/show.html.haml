@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @text.name
+%p
+  %b Episode:
+  = @text.episode
+%p
+  %b Artist:
+  = @text.artist
+%p
+  %b Raw:
+  = @text.raw
+
+= link_to 'Edit', edit_text_path(@text)
+\|
+= link_to 'Back', texts_path

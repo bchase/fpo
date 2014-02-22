@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
-  resources :decks
+  root to: 'home#index'
 
   devise_for :users
-  root to: 'home#index'
+
+  resources :decks
+  # resources :texts
 end
