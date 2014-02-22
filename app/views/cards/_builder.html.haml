@@ -1,14 +1,15 @@
 - @line.each_char_with_entries do |char, entries|
-  %span.char= char
-  %ol.entries.hide
-    - entries.each do |entry|
-      %li.entry
-        %p.traditional-characters
-          = entry.traditional_characters
-        %p.simplified-characters
-          = entry.simplified_characters
-        %p.pronunciation
-          = entry.pronunciation
-        %ol.glosses
-          - entry.glosses.each do |gloss|
-            %li.gloss= gloss
+  %span.char-wrapper
+    %span.char= char
+    %ol.entries.hide
+      - entries.each do |entry|
+        %li.entry
+          %p.traditional-characters
+            = entry.traditional_characters
+          %p.simplified-characters
+            = entry.simplified_characters
+          %p.pronunciation
+            = entry.pronunciation
+          %ol.glosses
+            - entry.glosses.each do |gloss|
+              %li.gloss= gloss
