@@ -15,6 +15,7 @@ class DecksController < ApplicationController
   # GET /decks/new
   def new
     @deck = Deck.new
+    @deck.text = Text.new
   end
 
   # GET /decks/1/edit

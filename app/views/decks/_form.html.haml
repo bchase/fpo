@@ -1,7 +1,15 @@
-= simple_form_for @deck, :html => { :class => 'form-horizontal' } do |f|
+= simple_form_for @deck, :html => { :class => 'form-horizontal' } do |d|
 
-  -# = f.input :user_id
+  = d.simple_fields_for :text do |t|
+
+    = t.input :name, label: false, placeholder: 'Name'
+    %br
+    = t.input :artist, label: false, placeholder: 'Artist'
+    %br
+    = t.input :episode, label: false, placeholder: 'Episode'
+    %br
+    = t.input :raw, label: false, placeholder: 'Text'
 
   .form-actions
-    = f.button :submit, :class => 'btn-primary'
+    = d.button :submit, :class => 'btn-primary'
     = link_to t('.cancel', :default => t("helpers.links.cancel")), decks_path, :class => 'btn'
