@@ -1,8 +1,8 @@
 class Line < String
   def initialize(record, line_num)
     text = text_for(record)
-    line = text.hanzi_line(line_num)
-    super line
+    str  = text.hanzi_line(line_num)
+    super str
     freeze
   end
 
