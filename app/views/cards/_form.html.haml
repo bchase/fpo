@@ -1,7 +1,7 @@
 #prompt.row
   .span6.page-header
     .well
-      %span#line= @line
+      %span#line= @raw_line
     %h2 Make a Card for this line?
   .span3
     %button#yes-card.btn-primary.btn-large.btn Yes
@@ -11,8 +11,11 @@
 
 = simple_form_for [@deck, @card], :html => { :class => 'form-horizontal hide' } do |f|
 
-  = f.hidden_field :front, value: @line
+  = render 'cards/builder'
+
+  = f.hidden_field :front, value: @raw_line
   = f.hidden_field :line_num, value: @line_num
+
   = f.input :back
 
   .form-actions
