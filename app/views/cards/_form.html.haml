@@ -1,19 +1,7 @@
-= form_for @card do |f|
-  - if @card.errors.any?
-    #error_explanation
-      %h2= "#{pluralize(@card.errors.count, "error")} prohibited this card from being saved:"
-      %ul
-        - @card.errors.full_messages.each do |msg|
-          %li= msg
-
-  .field
-    = f.label :front
-    = f.text_area :front
-  .field
-    = f.label :back
-    = f.text_area :back
-  .field
-    = f.label :deck
-    = f.text_field :deck
-  .actions
-    = f.submit 'Save'
+= simple_form_for @card, :html => { :class => 'form-horizontal' } do |f|
+  = f.input :front
+  = f.input :back
+  = f.input :deck_id
+  .form-actions
+    = f.button :submit, :class => 'btn-primary'
+    = link_to t('.cancel', :default => t("helpers.links.cancel")), cards_path, :class => 'btn'
