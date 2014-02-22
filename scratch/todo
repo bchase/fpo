@@ -13,5 +13,5 @@
   [ ] step definitions for first deck feature
     [X] scaffold decks
     [X] scaffold texts
-    [ ] theme decks
+    [X] theme decks
     [ ] feature passing

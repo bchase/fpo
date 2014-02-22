@@ -1,18 +1,18 @@
 - model_class = Deck
+
 .page-header
   %h1=t '.title', :default => model_class.model_name.human.pluralize.titleize
+
 %table.table.table-striped
   %thead
     %tr
       %th= model_class.human_attribute_name(:id)
-      %th= model_class.human_attribute_name(:user_id)
       %th= model_class.human_attribute_name(:created_at)
       %th=t '.actions', :default => t("helpers.actions")
   %tbody
     - @decks.each do |deck|
       %tr
         %td= link_to deck.id, deck_path(deck)
-        %td= deck.user_id
         %td=l deck.created_at
         %td
           = link_to t('.edit', :default => t("helpers.links.edit")), edit_deck_path(deck), :class => 'btn btn-mini'
