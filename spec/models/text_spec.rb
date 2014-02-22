@@ -8,12 +8,12 @@ describe Text do
   let(:hanzi_line_two) { song_text.raw.split("\n").third }
 
 
-  describe '#hanzi_line' do
-    it 'returns the line for the passed index (base 1), relative to all lines containing hanzi' do
-      song_text.hanzi_line(1).should eq(line_one)
-      song_text.hanzi_line(2).should eq(hanzi_line_two)
-    end
-  end
+  # describe '#hanzi_line' do
+  #   it 'returns the line for the passed index (base 1), relative to all lines containing hanzi' do
+  #     song_text.hanzi_line(1).should eq(line_one)
+  #     song_text.hanzi_line(2).should eq(hanzi_line_two)
+  #   end
+  # end
 
   describe '#hanzi_raw_arr' do
     it 'returns only lines of raw that contain hanzi, as an array' do
