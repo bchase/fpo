@@ -1,5 +1,5 @@
   [X] cucumber running
-  [ ] user feature
+  [X] user feature
     [X] devise install
     [X] home controller
     [X] twit boot rails layout
@@ -8,5 +8,6 @@
       [X] alert/notice divs
     [X] devise User
     [X] login top nav
-    [ ] feature passes
+    [X] feature passes
+
   [ ] step definitions for first deck feature
