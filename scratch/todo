@@ -1,9 +1,10 @@
   [X] cucumber running
   [ ] user feature
     [X] devise install
-    [ ] home controller
-    [ ] twit boot rails layout
+    [X] home controller
+    [X] twit boot rails layout
     [ ] devise install
-      [ ] root route
+      [X] root route
       [ ] alert/notice divs
+    [ ] devise User
   [ ] step definitions for first deck feature
