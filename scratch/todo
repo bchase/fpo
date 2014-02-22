@@ -3,8 +3,9 @@
     [X] devise install
     [X] home controller
     [X] twit boot rails layout
-    [ ] devise install
+    [X] devise install
       [X] root route
-      [ ] alert/notice divs
+      [X] alert/notice divs
     [ ] devise User
+    [ ] feature passes
   [ ] step definitions for first deck feature
