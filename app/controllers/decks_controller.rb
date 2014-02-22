@@ -14,8 +14,9 @@ class DecksController < ApplicationController
 
   # GET /decks/new
   def new
-    @deck = Deck.new
-    @deck.text = Text.new
+    @deck = Deck.new.tap do |deck|
+      deck.text = Text.new
+    end
   end
 
   # GET /decks/1/edit
