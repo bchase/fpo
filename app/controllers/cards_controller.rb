@@ -25,7 +25,8 @@ class CardsController < ApplicationController
   # POST /cards
   # POST /cards.json
   def create
-    @card = Card.new(card_params)
+    @deck = Deck.find(params[:deck_id])
+    @card = @deck.cards.build(card_params)
 
     respond_to do |format|
       if @card.save
@@ -76,6 +77,6 @@ private
   def prepare_card
     @deck  = Deck.find params[:deck_id]
     @line  = @deck.text.hanzi_line(params[:line_num])
-    @card = Card.new front: @line
+    @card  = Card.new front: @line
   end
 end

@@ -3,6 +3,7 @@
     [\] loop lines with hanzi /decks/123/text/line/1/cards/new
     [ ] scan line for entries with Zhdict
     [ ] card creator UI
+    [X] assign card to deck
     [ ] feature passing
 
   [ ] deck exporter
