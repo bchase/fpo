@@ -1,7 +1,9 @@
-= simple_form_for @card, :html => { :class => 'form-horizontal' } do |f|
-  = f.input :front
+= simple_form_for [@deck, @card], :html => { :class => 'form-horizontal' } do |f|
+
+  = f.input :front, html: { value: @line }
   = f.input :back
   = f.input :deck_id
+
   .form-actions
-    = f.button :submit, :class => 'btn-primary'
-    = link_to t('.cancel', :default => t("helpers.links.cancel")), cards_path, :class => 'btn'
+    = f.button :submit, :class => 'btn btn-primary'
+    -# = link_to t('.cancel', :default => t("helpers.links.cancel")), cards_path, :class => 'btn'
