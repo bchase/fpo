@@ -31,4 +31,12 @@ describe Text do
       song_text.raw_arr.second.should eq(line_two)
     end
   end
+
+  describe Text::String do
+    let(:str) { Text::String.new }
+
+    it 'responds to .kanji? calls' do
+      str.should respond_to(:kanji?)
+    end
+  end
 end
