@@ -1,7 +1,7 @@
 #prompt.row
   .span6.page-header
     .well
-      %span#line= @raw_line
+      %span#line= @line
     %h2 Make a Card for this line?
   .span3
     %button#yes-card.btn-primary.btn-large.btn Yes
@@ -13,7 +13,7 @@
 
   = render 'cards/builder'
 
-  = f.hidden_field :front, value: @raw_line
+  = f.hidden_field :front, value: @line
   = f.hidden_field :line_num, value: @line_num
 
   = f.input :back

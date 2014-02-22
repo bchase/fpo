@@ -1,4 +1,4 @@
-- @line.each do |char, entries|
+- @line.each_char_with_entries do |char, entries|
   %span.char= char
   %ol.entries.hide
     - entries.each do |entry|
