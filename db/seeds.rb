@@ -1,7 +1,17 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+Entry.create \
+  traditional_characters: '沒說的',
+  simplified_characters: '没说的',
+  pronunciation: 'mei2 shuo1 de5',
+  glosses: "really good"
+
+Entry.create \
+  traditional_characters: '沒',
+  simplified_characters: '没',
+  pronunciation: 'mei2',
+  glosses: "(negative prefix for verbs)\nhave not\nnot"
+
+Entry.create \
+  traditional_characters: '沒',
+  simplified_characters: '没',
+  pronunciation: 'mo4',
+  glosses: "drowned\nto end\nto die\nto inundate"
