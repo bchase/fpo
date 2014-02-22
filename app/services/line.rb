@@ -38,7 +38,8 @@ private
   def lookup_entries
     @entries = slices_front_to_back.map do |str|
       if str.present?
-        Entry.search_by_hanzi str
+        Entry.search_by_hanzi(str).flatten
+        # TODO should be flattened in zhdict?
       else
         []
       end

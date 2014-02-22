@@ -36,7 +36,7 @@ describe Line do
       let(:line) { Line.new text, 1 }
 
       it 'performs entry lookups for each char' do
-        pending "zhdict failing at lookups"
+        pending "failing at lookups..."
         line.instance_variable_get(:@entries).should eq(entries)
       end
     end
