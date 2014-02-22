@@ -11,7 +11,7 @@ Feature:
     # When I fill in "Link" ...
     And I press "Make Deck"
     Then I should see the song name
-    And there should be a new Deck
+    And I should have a new Deck
   
   Scenario: Export Deck (Anki)
     Given I'm logged in
