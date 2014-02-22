@@ -2,5 +2,7 @@ Entry
 
 Deck
   Text # name, episode, artist, raw
-  Card # has_many :entries
-    Phrase # target:boolean (else gloss)
+  Card # front, back
+    Expression # card_id, deck_id, line_idx, char_idx
+               # target:boolean (else gloss)
+               # has_many :entries
