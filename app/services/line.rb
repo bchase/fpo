@@ -2,8 +2,18 @@ class Line < String
   def initialize(record, line_num)
     text = text_for(record)
     str  = text.hanzi_line(line_num)
+
     super str
+
+    @entries = Entry.search_by_hanzi self.dup
+
     freeze
+  end
+
+  def each_char_with_entries(&block)
+    split('').each_with_index do |char, idx|
+      yield char, @entries[idx]
+    end
   end
 
 private

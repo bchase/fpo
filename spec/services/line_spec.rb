@@ -15,6 +15,8 @@ describe Line do
   let(:mei)       { create :mei }
   let(:mo)        { create :mo }
 
+  let(:entries) { [ [meishuode, mei, mo], [], []] }
+
   describe '.initialize' do
     it 'takes a deck and a line number (for deck text)' do
       line = Line.new deck, 1
@@ -27,14 +29,31 @@ describe Line do
 
       line.should eq(line_one)
     end
+
+    context 'lookups' do
+      let(:str)  { meishuode.traditional_characters }
+      let(:text) { Text.new raw: str }
+      let(:line) { Line.new text, 1 }
+
+      it 'performs entry lookups for each char' do
+        pending "zhdict failing at lookups"
+        line.instance_variable_get(:@entries).should eq(entries)
+      end
+    end
   end
 
-  describe '#to_s' do
-  end
+  describe '#each_char_with_entries' do
+    let(:str)  { meishuode.traditional_characters }
+    let(:text) { Text.new raw: str }
+    let(:line) { Line.new text, 1 }
 
-  describe '#inspect' do
-  end
+    it 'loops the line and looks up entries' do
+      line.each_char_with_entries do |char, entries|
+        char.should eq(mei.traditional_characters)
+        entries.should eq(entries)
 
-  describe '#each' do
+        break
+      end
+    end
   end
 end
