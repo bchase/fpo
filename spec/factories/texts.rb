@@ -1,10 +1,8 @@
-# Read about factories at https://github.com/thoughtbot/factory_girl
-
 FactoryGirl.define do
   factory :text do
-    name "MyString"
-    episode "MyString"
-    artist "MyString"
-    raw "MyText"
+    name "山丘"
+    artist "Jonathan Lee (李宗盛)"
+    # episode "MyString"
+    raw File.open('spec/texts/shanqiu.txt').readlines.join
   end
 end
