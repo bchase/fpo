@@ -37,7 +37,11 @@ private
 
   def lookup_entries
     @entries = slices_front_to_back.map do |str|
-      Entry.search_by_hanzi self.dup
+      if str.present?
+        Entry.search_by_hanzi str
+      else
+        []
+      end
     end
   end
 
