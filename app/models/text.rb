@@ -2,7 +2,7 @@ class Text < ActiveRecord::Base
   belongs_to :deck
 
   def hanzi_line(line_num)
-    idx = line_num - 1
+    idx = line_num.to_i - 1
     hanzi_raw_arr[idx]
   end
 

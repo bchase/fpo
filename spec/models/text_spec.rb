@@ -11,7 +11,10 @@ describe Text do
   describe '#hanzi_line' do
     it 'returns the line for the passed index (base 1), relative to all lines containing hanzi' do
       song_text.hanzi_line(1).should eq(line_one)
-      # song_text.hanzi_line(2).should eq(hanzi_line_two)
+      song_text.hanzi_line(2).should eq(hanzi_line_two)
+    end
+    it 'accepts strings' do
+      song_text.hanzi_line('1').should eq(line_one)
     end
   end
 
