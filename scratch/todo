@@ -1,21 +1,8 @@
-  [X] cucumber running
-  [X] user feature
-    [X] devise install
-    [X] home controller
-    [X] twit boot rails layout
-    [X] devise install
-      [X] root route
-      [X] alert/notice divs
-    [X] devise User
-    [X] login top nav
-    [X] feature passes
+  [ ] card creator
+    [ ] feature passing
 
-  [X] step definitions for first deck feature
-    [X] scaffold decks
-    [X] scaffold texts
-    [X] theme decks
-    [X] create deck feature passing
+  [ ] deck exporter
+    [ ] feature passing
 
-  [ ] restrict decks
-    [X] logged in
-    [ ] user's decks
+  [ ] deck CRUD
+    [ ] feature passing
