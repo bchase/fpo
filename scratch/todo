@@ -1,4 +1,8 @@
   [ ] card creator
+    [ ] change deck feature to reflect:
+    [ ] loop lines with hanzi /decks/123/text/line/1
+    [ ] scan line for entries with Zhdict
+    [ ] card creator UI
     [ ] feature passing
 
   [ ] deck exporter

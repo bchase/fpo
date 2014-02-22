@@ -11,6 +11,9 @@ gem 'pg'
 
 gem 'unicorn'
 
+gem 'cloze',  github: 'bchase/cloze'
+gem 'zhdict', github: 'bchase/zhdict'
+
 gem 'haml-rails'
 gem 'sass-rails', '~> 4.0.1'
 gem 'uglifier', '>= 1.3.0'
