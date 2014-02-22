@@ -6,6 +6,7 @@
     [X] devise install
       [X] root route
       [X] alert/notice divs
-    [ ] devise User
+    [X] devise User
+    [ ] login top nav
     [ ] feature passes
   [ ] step definitions for first deck feature
