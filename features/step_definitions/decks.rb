@@ -22,7 +22,7 @@ Then(/^I should see the song name$/) do
   pending # express the regexp above with the code you wish you had
 end
 
-Then(/^there should be a new Deck$/) do
+Then(/^I should have a new Deck$/) do
   pending # express the regexp above with the code you wish you had
 end
 
