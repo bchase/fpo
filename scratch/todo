@@ -10,12 +10,12 @@
     [X] login top nav
     [X] feature passes
 
-  [ ] step definitions for first deck feature
+  [X] step definitions for first deck feature
     [X] scaffold decks
     [X] scaffold texts
     [X] theme decks
-    [ ] feature passing
+    [X] create deck feature passing
 
   [ ] restrict decks
-    [ ] logged in
+    [X] logged in
     [ ] user's decks
