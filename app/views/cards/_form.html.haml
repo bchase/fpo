@@ -1,6 +1,6 @@
 = simple_form_for [@deck, @card], :html => { :class => 'form-horizontal' } do |f|
 
-  = f.input :front, html: { value: @line }
+  = f.input :front, input_html: { value: @line }
   = f.input :back
   = f.input :deck_id
 

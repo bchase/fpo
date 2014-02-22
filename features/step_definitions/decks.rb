@@ -38,7 +38,7 @@ Then(/^I should see the first line of the song$/) do
 end
 
 Then(/^I should have a new Deck$/) do
-  pending # express the regexp above with the code you wish you had
+  @user.decks.count.should eq(1)
 end
 
 Given(/^I have a populated Deck$/) do
