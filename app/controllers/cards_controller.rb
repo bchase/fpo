@@ -1,5 +1,6 @@
 class CardsController < ApplicationController
   before_action :set_card, only: [:show, :edit, :update, :destroy]
+  before_action :prepare_card, only: [:new]
 
   # GET /cards
   # GET /cards.json
@@ -61,14 +62,19 @@ class CardsController < ApplicationController
     end
   end
 
-  private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_card
-      @card = Card.find(params[:id])
-    end
+private
+  # Use callbacks to share common setup or constraints between actions.
+  def set_card
+    @card = Card.find(params[:id])
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def card_params
-      params.require(:card).permit(:front, :back, :deck_id)
-    end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def card_params
+    params.require(:card).permit(:front, :back, :deck_id)
+  end
+
+  def prepare_card
+    p = params.require(:deck_id, :line_num)
+    @card = Card.new front: @card.deck.text.line(p[:line_num])
+  end
 end
