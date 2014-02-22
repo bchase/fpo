@@ -1,6 +1,11 @@
 class Text < ActiveRecord::Base
   belongs_to :deck
 
+  def hanzi_line(line_num)
+    idx = line_num - 1
+    hanzi_raw_arr[idx]
+  end
+
   def hanzi_raw_arr
     raw_arr.select &:kanji?
   end
