@@ -1,4 +1,12 @@
-= simple_form_for [@deck, @card], :html => { :class => 'form-horizontal' } do |f|
+.prompt.row
+  .span6.page-header
+    %h2 Make a Card for this line?
+  .span3
+    %button.btn-primary.btn-large.btn Yes
+  .span3
+    = link_to 'No', card_builder_for_deck_and_text_line_path(@deck, @line_num + 1), :class => 'btn-large btn'
+
+= simple_form_for [@deck, @card], :html => { :class => 'form-horizontal hide' } do |f|
 
   = f.hidden_field :front, value: @line
   = f.hidden_field :line_num, value: @line_num

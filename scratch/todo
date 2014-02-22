@@ -5,6 +5,7 @@
     [ ] card creator UI
     [X] assign card to deck
     [ ] feature passing
+    [ ] handle card builder redirect for text.last + 1 case
 
   [ ] deck exporter
     [ ] feature passing
