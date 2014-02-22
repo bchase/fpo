@@ -1,15 +1,6 @@
-- @line.each_char_with_entries do |char, entries|
-  %span.char-wrapper
-    %span.char= char
-    %ol.entries.hide
-      - entries.each do |entry|
-        %li.entry
-          %p.traditional-characters
-            = entry.traditional_characters
-          %p.simplified-characters
-            = entry.simplified_characters
-          %p.pronunciation
-            = entry.pronunciation
-          %ol.glosses
-            - entry.glosses.each do |gloss|
-              %li.gloss= gloss
+.well
+  - @line.each_char_with_entries do |char, entries|
+    - @char, @entries = char, entries
+    %span.char-wrapper
+      %span.char.btn{data: {toggle: 'modal', target: "#char#{char.object_id}"}}= char
+      = render 'cards/entry_modal'

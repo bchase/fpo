@@ -3,5 +3,5 @@ if window.location.pathname.match /cards\/new/
     $('#prompt').slideUp()
     $('form#new_card').slideDown()
 
-  $(document).on 'click', 'span.char', (evt) ->
-    $(this).siblings('.entries').slideDown()
+  # $(document).on 'click', 'span.char', (evt) ->
+  #   $(this).siblings('.entries').slideDown()
