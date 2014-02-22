@@ -5,7 +5,7 @@ end
 
 def log_in(user)
   visit new_user_session_path
-  fill_in 'Login (email or username)', with: @email
+  fill_in 'Email', with: @email
   fill_in 'Password', with: @password
   begin
     click_button 'Sign in'
@@ -41,7 +41,7 @@ When /^I fill in "(.*?)" with "(.*?)"$/ do |field, value|
 end
 
 When /^I fill in my credentials$/ do
-  fill_in 'Login (email or username)', with: @email
+  fill_in 'Email', with: @email
   fill_in 'Password', with: @password
 end
 

@@ -19,14 +19,15 @@ Feature: User
     And  I click "Sign In"
     And  I fill in my credentials
     And  I press "Sign in"
-    Then I should see "Signed in successfully."
-    And  I should see "Sign Out"
+    # Then I should see "Signed in successfully."
+    Then I should see "Sign Out"
     And there should be 1 User
 
   Scenario: Sign-out
     Given I'm logged in
     When I visit the homepage
     And  I click "Sign Out"
-    Then I should see "Signed out successfully."
+    # Then I should see "Signed out successfully."
+    Then I should see "Sign In"
 
   Scenario: Account Settings
