@@ -1,4 +1,4 @@
-#prompt.row
+#prompt.row.hide
   .span6.page-header
     .well
       %span#line= @line
@@ -9,7 +9,8 @@
     = link_to 'No', card_builder_for_deck_and_text_line_path(@deck, @line_num + 1), :class => 'btn-large btn'
 
 
-= simple_form_for [@deck, @card], :html => { :class => 'form-horizontal hide' } do |f|
+-# = simple_form_for [@deck, @card], :html => { :class => 'form-horizontal hide' } do |f|
+= simple_form_for [@deck, @card], :html => { :class => 'form-horizontal' } do |f|
 
   = render 'cards/builder'
 
