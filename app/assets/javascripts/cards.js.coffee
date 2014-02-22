@@ -5,3 +5,6 @@ if window.location.pathname.match /cards\/new/
     $(document).on 'click', '#yes-card', ->
       $('#prompt').slideUp()
       $('form#new_card').slideDown()
+
+    $('button.use-entry').on 'click', ->
+      $(this).toggleClass('btn-success')
