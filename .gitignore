@@ -1,0 +1,21 @@
+/.bundle
+
+/db/*.sqlite3
+
+/log/*.log
+/tmp
+
+*.sw?
+*.DS_Store
+
+/public/system
+
+/todo
+
+# ignore generated xlsx docs
+*.xlsx
+
+.env
+
+*.dump
+*.dump.des3
