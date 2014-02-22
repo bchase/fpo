@@ -26,11 +26,10 @@ class DecksController < ApplicationController
   # POST /decks
   # POST /decks.json
   def create
-    @deck = Deck.new
+    @deck = current_user.decks.build
     @text = Text.new(deck_params[:text_attributes])
     @deck.text = @text
 
-    binding.pry
     respond_to do |format|
       if @deck.save
         format.html { redirect_to @deck, notice: 'Deck was successfully created.' }

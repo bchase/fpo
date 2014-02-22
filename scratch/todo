@@ -15,3 +15,7 @@
     [X] scaffold texts
     [X] theme decks
     [ ] feature passing
+
+  [ ] restrict decks
+    [ ] logged in
+    [ ] user's decks
