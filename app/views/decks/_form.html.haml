@@ -2,13 +2,13 @@
 
   = d.simple_fields_for :text do |t|
 
-    = t.input :name, label: false, placeholder: 'Name'
+    = t.input :name, placeholder: 'Name'
     %br
-    = t.input :artist, label: false, placeholder: 'Artist'
+    = t.input :artist, placeholder: 'Artist'
     %br
-    = t.input :episode, label: false, placeholder: 'Episode'
+    = t.input :episode, placeholder: 'Episode'
     %br
-    = t.input :raw, label: false, placeholder: 'Text'
+    = t.input :raw, placeholder: 'Text'
 
   .form-actions
     = d.button :submit, :class => 'btn-primary'
