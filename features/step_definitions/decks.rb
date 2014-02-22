@@ -1,7 +1,3 @@
-Given(/^I'm logged in$/) do
-  pending # express the regexp above with the code you wish you had
-end
-
 Given(/^I visit the new Deck page$/) do
   pending # express the regexp above with the code you wish you had
 end
