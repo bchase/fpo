@@ -1,0 +1,19 @@
+%h1 Listing decks
+
+%table
+  %tr
+    %th User
+    %th
+    %th
+    %th
+
+  - @decks.each do |deck|
+    %tr
+      %td= deck.user
+      %td= link_to 'Show', deck
+      %td= link_to 'Edit', edit_deck_path(deck)
+      %td= link_to 'Destroy', deck, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Deck', new_deck_path
