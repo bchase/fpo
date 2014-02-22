@@ -1,6 +1,6 @@
 def create_user
-  @email, @password, @name = 'foo@bar.com', 'asdfasdf', 'Foo User'
-  @user = User.create email: @email, password: @password, name: @name
+  @email, @password = 'foo@bar.com', 'asdfasdf'
+  @user = User.create email: @email, password: @password
 end
 
 def log_in(user)
