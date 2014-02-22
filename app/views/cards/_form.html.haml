@@ -4,9 +4,10 @@
       %span#line= @line
     %h2 Make a Card for this line?
   .span3
-    %button.btn-primary.btn-large.btn Yes
+    %button#yes-card.btn-primary.btn-large.btn Yes
   .span3
     = link_to 'No', card_builder_for_deck_and_text_line_path(@deck, @line_num + 1), :class => 'btn-large btn'
+
 
 = simple_form_for [@deck, @card], :html => { :class => 'form-horizontal hide' } do |f|
 
