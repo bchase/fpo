@@ -7,7 +7,7 @@ class Text < ActiveRecord::Base
   end
 
   def hanzi_raw_arr
-    raw_arr.select &:kanji?
+    raw_arr.select &:has_kanji?
   end
 
   def raw_arr
@@ -24,5 +24,6 @@ private
   # TODO 
   class String < ::String
     include Cloze::JapaneseStringHelpers
+    alias :has_kanji? :kanji?
   end
 end
