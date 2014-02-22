@@ -1,0 +1,26 @@
+.accordion{id: "accordian#{@char.object_id}"}
+  - @entries.each do |entry|
+    .accordion-group
+      .accordion-heading
+        %a.accordion-toggle{"data-parent" => "accordian#{@char.object_id}", "data-toggle" => "collapse", :href => "#entry#{entry.id}"}
+          = entry.traditional_characters
+      .accordion-body.collapse.in{id: "entry#{entry.id}"}
+        .accordion-inner
+          %p= entry.pronunciation
+          %ol.glosses
+            - entry.glosses.each do |gloss|
+              %li.gloss= gloss
+
+
+-# %ol.entries
+  - @entries.each do |entry|
+    %li.entry
+      %p.traditional-characters
+        = entry.traditional_characters
+      %p.simplified-characters
+        = entry.simplified_characters
+      %p.pronunciation
+        = entry.pronunciation
+      %ol.glosses
+        - entry.glosses.each do |gloss|
+          %li.gloss= gloss

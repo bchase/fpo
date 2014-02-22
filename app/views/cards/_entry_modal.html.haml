@@ -3,18 +3,7 @@
     %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} ×
     %h3#modal-label Select Entries
   .modal-body
-    %ol.entries
-      - @entries.each do |entry|
-        %li.entry
-          %p.traditional-characters
-            = entry.traditional_characters
-          %p.simplified-characters
-            = entry.simplified_characters
-          %p.pronunciation
-            = entry.pronunciation
-          %ol.glosses
-            - entry.glosses.each do |gloss|
-              %li.gloss= gloss
+    = render 'cards/entry_accordian'
   .modal-footer
     %button.btn{"aria-hidden" => "true", "data-dismiss" => "modal"} Cancel
     %button.btn.btn-primary Done

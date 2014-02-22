@@ -2,10 +2,10 @@
     [X] change deck feature to reflect:
     [\] loop lines with hanzi /decks/123/text/line/1/cards/new
       [ ] on cards#create go to next text line
-    [ ] scan line for entries with Zhdict
-      [ ] service object for this?
-      [ ] partial to render
-    [ ] card creator UI
+    [\] scan line for entries with Zhdict
+      [X] service object for this?
+      [\] partial to render
+    [\] card creator UI
     [X] assign card to deck
     [ ] feature passing
     [ ] handle card builder redirect for text.last + 1 case
@@ -15,3 +15,5 @@
 
   [ ] deck CRUD
     [ ] feature passing
+
+  [ ] fix mobile CSS (top nav pushed down)
