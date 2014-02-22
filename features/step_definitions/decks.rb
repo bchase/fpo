@@ -32,8 +32,9 @@ When(/^I fill in "(.*?)" with the lyrics$/) do |_lyrics|
   fill_in :deck_text_attributes_raw, with: song.lyrics
 end
 
-Then(/^I should see the song name$/) do
-  page.should have_content(song.name)
+Then(/^I should see the first line of the song$/) do
+  first_line = song.lyrics.split("\n").first
+  page.should have_content(first_line)
 end
 
 Then(/^I should have a new Deck$/) do

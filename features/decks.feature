@@ -10,7 +10,7 @@ Feature:
     When I fill in "Text" with the lyrics
     # When I fill in "Link" ...
     And I press "Create Deck"
-    Then I should see the song name
+    Then I should see the first line of the song
     And I should have a new Deck
   
   # Scenario: Export Deck (Anki)
