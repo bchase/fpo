@@ -3,7 +3,8 @@
     .accordion-group
       .accordion-heading
         %a.chars.accordion-toggle{"data-parent" => "accordion#{@char.object_id}", "data-toggle" => "collapse", :href => "#entry#{entry.id}"}
-          = entry.traditional_characters
+          -# TODO preference
+          #{entry.traditional_characters} (#{entry.simplified_characters})
       .accordion-body.collapse{id: "entry#{entry.id}"}
         .accordion-inner
           %p= entry.pronunciation
