@@ -1,6 +1,7 @@
 class DecksController < ApplicationController
   before_action :set_deck, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
+  before_action :check_deck_ownership!, only: [:show, :edit, :update, :destroy]
 
   # GET /decks
   # GET /decks.json
@@ -66,14 +67,18 @@ class DecksController < ApplicationController
     end
   end
 
-  private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_deck
-      @deck = Deck.find(params[:id])
-    end
+private
+  # Use callbacks to share common setup or constraints between actions.
+  def set_deck
+    @deck = Deck.find(params[:id])
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def deck_params
-      params.require(:deck).permit(text_attributes: [:name, :artist, :episode, :raw])
-    end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def deck_params
+    params.require(:deck).permit(text_attributes: [:name, :artist, :episode, :raw])
+  end
+
+  def check_deck_ownership!
+    redirect_to decks_path unless @deck.user.id == current_user.id
+  end
 end
