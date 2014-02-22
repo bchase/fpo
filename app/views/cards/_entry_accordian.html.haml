@@ -2,13 +2,13 @@
   - @entries.each do |entry|
     .accordion-group
       .accordion-heading
-        %span
+        %a.accordion-toggle{"data-parent" => "accordion#{@char.object_id}", "data-toggle" => "collapse", :href => "#entry#{entry.id}"}
           %button.use-entry{type: "button", :class => "btn", data: {toggle: "button"}} 
             %i.icon-unchecked
             %i.icon-check
-        %a.chars.accordion-toggle{"data-parent" => "accordion#{@char.object_id}", "data-toggle" => "collapse", :href => "#entry#{entry.id}"}
-          -# TODO preference
-          #{entry.traditional_characters} (#{entry.simplified_characters})
+          %span.chars
+            -# TODO preference
+            #{entry.traditional_characters} (#{entry.simplified_characters})
       .accordion-body.collapse{id: "entry#{entry.id}"}
         .accordion-inner
           %p= entry.pronunciation
