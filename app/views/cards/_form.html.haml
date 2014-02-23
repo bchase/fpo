@@ -17,6 +17,10 @@
   = f.hidden_field :front, value: @line
   = f.hidden_field :line_num, value: @line_num
 
+  -# .row
+    .span3
+      = f.input :back, placeholder: 'Back (Notes)'
+
   = f.input :back, placeholder: 'Back (Notes)'
 
   .form-actions
