@@ -22,7 +22,13 @@
     .span3
       = f.input :back, placeholder: 'Back (Notes)'
 
-  = f.input :back, placeholder: 'Back (Notes)'
+  .row
+    .span3
+      = f.input :back, placeholder: 'Back (Notes)'
+    .span3
+      #expressions
 
-  .form-actions
-    = f.button :submit, :class => 'btn-primary btn-large btn'
+  .row
+    .span6
+      %br
+      = f.button :submit, :class => 'btn-primary btn-large btn'
