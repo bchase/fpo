@@ -14,7 +14,6 @@ class Entry < ActiveRecord::Base
     end
   end
 
-private
   def export_anki
     "#{traditional_characters}<br>" +
     "#{simplified_characters}<br>" +
@@ -22,6 +21,7 @@ private
     "#{glosses_to_s}<br>"
   end
 
+private
   def glosses_to_s
     idx = 1
     glosses.map {|gloss|
