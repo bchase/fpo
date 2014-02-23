@@ -25,12 +25,22 @@ class CardsController < ApplicationController
   # POST /cards
   # POST /cards.json
   def create
-    raise params.to_yaml
     line_num = card_params.delete(:line_num).to_i
+
+    raw_exp_params = params[:card].delete(:expressions)
 
     @deck = Deck.find(params[:deck_id])
     @card = @deck.cards.build(card_params)
+    # TODO move
+    raw_exp_params.each do |char_num, entry_ids|
+      char_num, entry_ids = char_num.to_i, entry_ids.map(&:to_i)
+      @card.expressions.build \
+        char_num:  char_num,
+        entry_ids: entry_ids
+    end
 
+    binding.pry
+    raise params.to_yaml
     respond_to do |format|
       if @card.save
         format.html { redirect_to card_builder_for_deck_and_text_line_path(@deck, line_num+1), notice: 'Card was successfully created.' }

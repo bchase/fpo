@@ -1,6 +1,7 @@
   [ ] card creator
-    [ ] backbone view/model for form?
-      [ ] qunit tests?
+    [X] build hidden fields on .use-entry
+    [ ] build expressions in cards#create
+    [ ] show what words are added
 
     [*] feature passing
           poltergeist not playing along
@@ -10,6 +11,7 @@
     [\] loop lines with hanzi /decks/123/text/line/1/cards/new
       [ ] on cards#create go to next text line
 
+    [ ] fix: submits form on model done click
 
 
 

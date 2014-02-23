@@ -38,7 +38,7 @@ if window.location.pathname.match /cards\/new/
       input = $ '<input>',
         id:    hiddenFieldId(entryId)
         type: 'hidden'
-        name: "cards[expressions][#{charNum}][entries][]"
+        name: "card[expressions][#{charNum}][entries][]"
         value: entryId
       $('form#new_card').append input
 
