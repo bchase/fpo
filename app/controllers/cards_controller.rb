@@ -88,7 +88,14 @@ private
   def prepare_card
     @deck     = Deck.find params[:deck_id]
     @line_num = params[:line_num].to_i
-    @line     = Line.new @deck, @line_num
-    @card     = Card.new front: @line
+
+    begin
+      @line = Line.new @deck, @line_num
+
+      @card = Card.new front: @line
+    rescue ArgumentError
+      # TODO notice
+      redirect_to decks_path, notice: 'Deck complete!' and return
+    end
   end
 end
