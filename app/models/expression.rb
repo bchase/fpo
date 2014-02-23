@@ -1,7 +1,7 @@
 class Expression < ActiveRecord::Base
   belongs_to :card
 
-  has_many :entries
+  has_and_belongs_to_many :entries
 
   def export(format)
     format = format.to_s
