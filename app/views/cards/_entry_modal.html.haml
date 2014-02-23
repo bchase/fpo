@@ -1,7 +1,9 @@
 .modal.hide{id: "char#{@char.object_id}", "aria-hidden" => "true", "aria-labelledby" => "modal-label", :role => "dialog", :tabindex => "-1"}
   .modal-header
     %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} ×
-    %h3#modal-label Select Entries
+    %h3#modal-label 
+      Select Entries
+      %a.btn.use-all Use All
   .modal-body
     = render 'cards/entry_accordian'
   .modal-footer

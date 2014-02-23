@@ -6,6 +6,7 @@
       [X] service object for this?
       [\] partial to render
     [\] card creator UI
+      [ ] style accordion glosses
     [X] assign card to deck
     [ ] feature passing
     [ ] handle card builder redirect for text.last + 1 case

@@ -13,8 +13,8 @@ Feature:
     And I've just created a Deck
     And I've been redirected to the Card builder
     When I press "Yes"
-    And I click "沒說的"
-    # And I click "沒" # ???
+    # And I click "沒說的"
+    And I press "沒"
     And I press "All"
     And I press "Target"
     And I press "Create Card"
