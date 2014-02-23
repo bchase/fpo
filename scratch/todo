@@ -1,42 +1,29 @@
   [ ] card creator
-    [X] build hidden fields on .use-entry
-    [X] build expressions in cards#create
+    [*] feature passing (poltergeist not playing along)
 
-    [*] feature passing
-          poltergeist not playing along
-    [ ] handle card builder redirect for last line of deck text
     [\] card creator UI
       [ ] show what words are added
       [ ] style accordion glosses
-    [\] loop lines with hanzi /decks/123/text/line/1/cards/new
-      [ ] on cards#create go to next text line
-
-    [ ] fix: submits form on model done click
-
-
-
-
-
-
-
-
-  [X] deck exporter
-    [ ] anki feature passing
-
-
-
-
-
-
-
-
-
-
-
-
+      [ ] fix: submits form on model done click
 
   [ ] deck CRUD
+    [ ] export anki btn
+    [ ] view cards
+    [ ] anki feature passing
     [ ] feature passing
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   [ ] fix mobile CSS (top nav pushed down)
   [ ] dependent destroys  
