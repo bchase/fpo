@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140223013554) do
+ActiveRecord::Schema.define(version: 20140223021820) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -43,6 +43,15 @@ ActiveRecord::Schema.define(version: 20140223013554) do
     t.text   "glosses"
     t.string "raw_entry"
   end
+
+  create_table "expressions", force: true do |t|
+    t.integer  "card_id"
+    t.integer  "char_num"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "expressions", ["card_id"], name: "index_expressions_on_card_id", using: :btree
 
   create_table "texts", force: true do |t|
     t.string   "name"

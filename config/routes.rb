@@ -10,4 +10,5 @@ Rails.application.routes.draw do
     as: :card_builder_for_deck_and_text_line
 
   # resources :texts
+  # resources :expressions
 end

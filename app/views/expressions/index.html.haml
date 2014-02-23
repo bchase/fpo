@@ -1,0 +1,21 @@
+%h1 Listing expressions
+
+%table
+  %tr
+    %th Card
+    %th Char num
+    %th
+    %th
+    %th
+
+  - @expressions.each do |expression|
+    %tr
+      %td= expression.card
+      %td= expression.char_num
+      %td= link_to 'Show', expression
+      %td= link_to 'Edit', edit_expression_path(expression)
+      %td= link_to 'Destroy', expression, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Expression', new_expression_path

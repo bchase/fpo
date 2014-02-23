@@ -8,11 +8,17 @@
     [\] card creator UI
       [ ] style accordion glosses
     [X] assign card to deck
-    [ ] feature passing
-    [ ] handle card builder redirect for text.last + 1 case
+    [ ] backbone view/model for form?
+      [ ] qunit tests?
+    [*] feature passing
+          poltergeist not playing along
+    [ ] handle card builder redirect for last line of deck text
 
   [ ] deck exporter
+    [ ] export to anki
     [ ] feature passing
+
+    [?] export to mnemosyne
 
   [ ] deck CRUD
     [ ] feature passing
