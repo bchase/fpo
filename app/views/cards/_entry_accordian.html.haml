@@ -1,4 +1,4 @@
-.accordion{id: "accordion#{@char.object_id}"}
-  - @entries.each do |entry|
-    - @entry = entry
+.entry-select.accordion{id: "accordion#{@char.object_id}"}
+  - @entries.each_with_index do |entry, idx|
+    - @entry, @idx = entry, idx
     = render 'cards/accordion_entry'

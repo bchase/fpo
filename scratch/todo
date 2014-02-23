@@ -9,6 +9,8 @@
         [ ] label
         [ ] use something other than .well ?
       [ ] style accordion glosses
+    [ ] handle case of nil expressions
+    [ ] force scrollbar
 
   [ ] deck CRUD
     [ ] export anki btn
@@ -17,6 +19,7 @@
     [ ] feature passing
 
   [ ] mongo for zhdict
+  [ ] rename accordion_entry partials
 
 
 

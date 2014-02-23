@@ -1,4 +1,4 @@
-.accordion-group
+.accordion-group{:class => "accordion-entry#{@entry.id}", data:{slug: "char#{@char_num}idx#{@idx}entry#{@entry.id}"}}
   .accordion-heading
     %a.btn.use-entry{type: "button", data: {toggle: "button", id: @entry.id}} 
       %i.icon-unchecked
