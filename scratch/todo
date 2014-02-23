@@ -2,17 +2,14 @@
     [*] feature passing (poltergeist not playing along)
 
     [\] card creator UI
-      [X] fix: submits form on model done click
-      [X] show entry list
       [ ] card front
         [ ] label
         [ ] use something other than .well ?
       [ ] style accordion glosses
-    [ ] handle case of nil expressions
     [ ] force scrollbar
 
   [ ] deck CRUD
-    [ ] export anki btn
+    [X] export anki btn
     [ ] view cards
     [ ] anki feature passing
     [ ] feature passing
