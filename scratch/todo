@@ -2,9 +2,13 @@
     [*] feature passing (poltergeist not playing along)
 
     [\] card creator UI
+      [X] fix: submits form on model done click
       [ ] show what words are added
+        [ ] .btn-success btns for remove
+      [ ] card front
+        [ ] label
+        [ ] use something other than .well ?
       [ ] style accordion glosses
-      [ ] fix: submits form on model done click
 
   [ ] deck CRUD
     [ ] export anki btn
@@ -12,6 +16,7 @@
     [ ] anki feature passing
     [ ] feature passing
 
+  [ ] mongo for zhdict
 
 
 
