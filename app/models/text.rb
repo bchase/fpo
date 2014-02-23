@@ -7,11 +7,11 @@ class Text < ActiveRecord::Base
   end
 
   def hanzi_raw_arr
-    raw_arr.select &:has_kanji?
+    @hanzi_raw_arr ||= raw_arr.select &:has_kanji?
   end
 
   def raw_arr
-    raw.split("\n").map do |str|
+    @raw_arr ||= raw.split("\n").map do |str|
       Text::String.new str.chomp
     end
   end
@@ -29,10 +29,10 @@ private
 
   def index_for_line_num!(line_num)
     idx = line_num.to_i - 1
-    if idx < length
+    if idx < hanzi_raw_arr.length
       idx
     else
-      raise ParameterError.new("line_num #{line_num} out of bounds for Text##{id}") 
+      raise ArgumentError.new("line_num #{line_num} out of bounds for Text##{id}") 
     end
   end
 end
