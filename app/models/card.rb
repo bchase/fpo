@@ -19,6 +19,8 @@ class Card < ActiveRecord::Base
 
 private
   def back_for_anki
-    expressions.map(&:export_anki).join('<br>')
+    expressions.map(&:export_anki).
+      join('<br>').
+      +("<br>#{back}")
   end
 end
