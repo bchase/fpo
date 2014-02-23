@@ -3,8 +3,7 @@
 
     [\] card creator UI
       [X] fix: submits form on model done click
-      [ ] show what words are added
-        [ ] .btn-success btns for remove
+      [X] show entry list
       [ ] card front
         [ ] label
         [ ] use something other than .well ?

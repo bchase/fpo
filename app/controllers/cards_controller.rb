@@ -32,11 +32,13 @@ class CardsController < ApplicationController
     @deck = Deck.find(params[:deck_id])
     @card = @deck.cards.build(card_params)
     # TODO move
-    raw_exp_params.each do |char_num, entry_ids|
-      char_num, entry_ids = char_num.to_i, entry_ids.map(&:to_i)
-      @card.expressions.build \
-        char_num:  char_num,
-        entry_ids: entry_ids
+    if raw_exp_params.present?
+      raw_exp_params.each do |char_num, entry_ids|
+        char_num, entry_ids = char_num.to_i, entry_ids.map(&:to_i)
+        @card.expressions.build \
+          char_num:  char_num,
+          entry_ids: entry_ids
+      end
     end
 
     respond_to do |format|
