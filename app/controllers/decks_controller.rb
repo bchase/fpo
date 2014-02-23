@@ -3,6 +3,8 @@ class DecksController < ApplicationController
   before_action :authenticate_user!
   before_action :check_deck_ownership!, only: [:show, :edit, :update, :destroy]
 
+  respond_to :html, :json, :txt
+
   # GET /decks
   # GET /decks.json
   def index
@@ -12,6 +14,7 @@ class DecksController < ApplicationController
   # GET /decks/1
   # GET /decks/1.json
   def show
+    respond_with @deck
   end
 
   # GET /decks/new
