@@ -52,6 +52,11 @@ anki
     it 'exports to Anki format' do
       deck.export(:anki).should eq(anki_export_str)
     end
+    # Deck
+    #   Text
+    #   Card 
+    #     Expression
+    #       Entry
   end
 end
 

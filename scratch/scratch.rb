@@ -1,11 +1,34 @@
-# Song < Struct.new(:name, :artist, :lyrics)
-# 
-# # name = "Shan Qiu - Jonathan Lee (山丘 - 李宗盛)"
-# name   = "山丘"
-# artist = "Jonathan Lee (李宗盛)"
-# lyrics = "想說卻還沒說的 還很多
-# Xiang shuo que hai mei shuo de hai hen duo
-# 攢着是因為想寫成歌
-# Zan zhe shin yin wei xiang xie cheng ge"
-# 
-# @song  = Song.new name, artist, lyrics
+# anki export
+
+class Deck
+  def export(format)
+    # .TXT LINE
+    deck.cards.map do |card|
+      card.export(format)
+    end.join("\n")
+  end
+
+end
+
+class Card
+  def export(format)
+    "#{front}\t#{back_export}"
+  end
+
+  def back_export
+    deck.cards.map do |card|
+      front = card.front
+      back  = back_to_s
+
+      "#{front}\t#{back}"
+    end.
+      join("<br>").
+      +(back)
+  end
+end
+
+class Expression
+  def export(format)
+
+  end
+end
