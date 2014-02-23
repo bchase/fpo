@@ -27,7 +27,7 @@ if window.location.pathname.match /cards\/new/
         $(btn).trigger 'click'
 
     $('span.char').on 'click', (evt) ->
-      window.charNum = $(this).index() + 1
+      window.charNum = $(this).index('span.char') + 1
       
 
 
