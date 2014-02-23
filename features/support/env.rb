@@ -11,9 +11,6 @@ require 'cucumber/rails'
 # selectors in your step definitions to use the XPath syntax.
 # Capybara.default_selector = :xpath
 
-require 'capybara/poltergeist'
-Capybara.javascript_driver = :poltergeist
-
 # By default, any exception happening in your Rails application will bubble up
 # to Cucumber so that your scenario will fail. This is a different from how 
 # your application behaves in the production environment, where an error page will 
@@ -59,3 +56,30 @@ end
 # See https://github.com/cucumber/cucumber-rails/blob/master/features/choose_javascript_database_strategy.feature
 Cucumber::Rails::Database.javascript_strategy = :truncation
 
+
+# require 'capybara/cucumber'
+# require 'capybara/poltergeist'
+# Capybara.javascript_driver = :poltergeist
+# 
+# if ENV['IN_BROWSER']
+#   # On demand: non-headless tests via Selenium/WebDriver
+#   # To run the scenarios in browser (default: Firefox), use the following command line:
+#   # RUN_IN_BROWSER=true bundle exec cucumber
+#   # or (to have a pause of 1 second between each step):
+#   # RUN_IN_BROWSER=true PAUSE=1 bundle exec cucumber
+#   Capybara.default_driver = :selenium
+#   AfterStep do
+#     sleep (ENV['PAUSE'] || 0).to_i
+#   end
+# else
+#   # DEFAULT: headless tests with poltergeist/PhantomJS
+#   Capybara.register_driver :poltergeist do |app|
+#     Capybara::Poltergeist::Driver.new(
+#       app,
+#       window_size: [1280, 1024]#,
+#       #debug:       true
+#     )
+#   end
+#   Capybara.default_driver    = :poltergeist
+#   Capybara.javascript_driver = :poltergeist
+# end
