@@ -1,6 +1,7 @@
 .well
   - @line.each_char_with_entries do |char, entries|
     - @char, @entries = char, entries
-    %span.char-wrapper
-      %button.char.btn{data: {toggle: 'modal', target: "#char#{char.object_id}"}}= char
-      = render 'cards/entry_modal'
+    -# %span.char-wrapper
+      -# %button.char.btn{data: {toggle: 'modal', target: "#char#{char.object_id}"}}= char
+    %span.char{data: {toggle: 'modal', target: "#char#{char.object_id}"}}= char
+    = render 'cards/entry_modal'
