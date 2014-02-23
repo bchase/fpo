@@ -39,8 +39,6 @@ class CardsController < ApplicationController
         entry_ids: entry_ids
     end
 
-    binding.pry
-    raise params.to_yaml
     respond_to do |format|
       if @card.save
         format.html { redirect_to card_builder_for_deck_and_text_line_path(@deck, line_num+1), notice: 'Card was successfully created.' }
