@@ -1,0 +1,15 @@
+.accordion-group
+  .accordion-heading
+    %a.btn.use-entry{type: "button", data: {toggle: "button", id: @entry.id}} 
+      %i.icon-unchecked
+      %i.icon-check
+    %a.accordion-toggle{"data-parent" => "accordion#{@char.object_id}", "data-toggle" => "collapse", :href => "#entry#{@entry.id}"}
+      %span.chars
+        -# TODO preference
+        #{@entry.traditional_characters} (#{@entry.simplified_characters})
+  .accordion-body.collapse{id: "entry#{@entry.id}"}
+    .accordion-inner
+      %p= @entry.pronunciation
+      %ol.glosses
+        - @entry.glosses.each do |gloss|
+          %li.gloss= gloss
