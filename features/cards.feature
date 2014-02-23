@@ -8,6 +8,7 @@ Feature:
   #   And I've been redirected to the Card builder 
   #   Then I should see the first line of the song
 
+  @js
   Scenario: Create a new Card w/ multiple gloss Expressions after creating a Deck
     Given I'm logged in
     And I've just created a Deck
