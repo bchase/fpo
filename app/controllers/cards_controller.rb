@@ -25,6 +25,7 @@ class CardsController < ApplicationController
   # POST /cards
   # POST /cards.json
   def create
+    raise params.to_yaml
     line_num = card_params.delete(:line_num).to_i
 
     @deck = Deck.find(params[:deck_id])

@@ -1,0 +1,13 @@
+deck_id: 123
+card:
+  front: foo
+  back: bar
+  line_num: 1
+  expressions:
+    - char_num: 1
+      entries:
+        - id: 123
+        - id: 456
+    - char_num: 2
+      entries:
+        - id: 789

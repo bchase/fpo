@@ -1,24 +1,37 @@
   [ ] card creator
-    [X] change deck feature to reflect:
-    [\] loop lines with hanzi /decks/123/text/line/1/cards/new
-      [ ] on cards#create go to next text line
-    [\] scan line for entries with Zhdict
-      [X] service object for this?
-      [\] partial to render
-    [\] card creator UI
-      [ ] style accordion glosses
-    [X] assign card to deck
     [ ] backbone view/model for form?
       [ ] qunit tests?
+
     [*] feature passing
           poltergeist not playing along
     [ ] handle card builder redirect for last line of deck text
+    [\] card creator UI
+      [ ] style accordion glosses
+    [\] loop lines with hanzi /decks/123/text/line/1/cards/new
+      [ ] on cards#create go to next text line
 
-  [ ] deck exporter
-    [ ] export to anki
-    [ ] feature passing
 
-    [?] export to mnemosyne
+
+
+
+
+
+
+
+  [X] deck exporter
+    [ ] anki feature passing
+
+
+
+
+
+
+
+
+
+
+
+
 
   [ ] deck CRUD
     [ ] feature passing
