@@ -5,6 +5,11 @@ if window.location.pathname.match /cards\/new/
       $('#prompt').slideUp()
       $('form#new_card').slideDown()
 
+    $(document).on 'click', '#expressions.accordion .use-entry', (evt) ->
+      removeEntryFromList entryId
+      entry = $(this).closest('.accordion-group')
+      entry.remove()
+
     $('.btn.use-entry').on 'click', (evt) ->
       evt.preventDefault()
 
@@ -14,9 +19,11 @@ if window.location.pathname.match /cards\/new/
       entryId = $(this).data('id')
 
       if $(this).hasClass('btn-success')
-        addHiddenFieldForEntry entryId
+        # addHiddenFieldForEntry entryId
+        addEntryToList entryId
       else
-        removeHiddenFieldForEntry entryId
+        # removeHiddenFieldForEntry entryId
+        removeEntryFromList entryId
 
     $('.btn.use-all').on 'click', (evt) ->
       modal = $(this).closest('.modal')
@@ -31,21 +38,31 @@ if window.location.pathname.match /cards\/new/
       
 
 
-    hiddenFieldId = (entryId) ->
+    entryItemId = (entryId) ->
       "char#{charNum}entry#{entryId}"
 
-    addHiddenFieldForEntry = (entryId) ->
+    hiddenFieldForEntry = (entryId) ->
       input = $ '<input>',
-        id:    hiddenFieldId(entryId)
         type: 'hidden'
         name: "card[expressions][#{charNum}][]"
         value: entryId
-      $('form#new_card').append input
+
+    addEntryToList = (entryId) ->
+      entry = $("#accordion-entry#{entryId}").clone()
+      list  = $("#expressions.accordion")
+      input = hiddenFieldForEntry(entryId)
+      entry.append(input)
+      list.append(entry)
+
+    removeEntryFromList = (entryId) ->
+      id   = "#accordion-entry#{entryId}"
+      list = $("#expressions.accordion")
+      list.remove(id)
 
     removeHiddenFieldForEntry = (entryId) ->
-        id    = hiddenFieldId(entryId)
-        input = $("##{id}")
-        input.remove()
+        id    = entryItemId(entryId)
+        entry = $("##{id}")
+        entry.remove()
 
     clearSelection = ->
         if window.getSelection
