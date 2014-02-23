@@ -12,7 +12,7 @@ gem 'pg'
 gem 'unicorn'
 
 gem 'cloze',  github: 'bchase/cloze'
-# gem 'zhdict', github: 'bchase/zhdict'
+gem 'zhdict', github: 'bchase/zhdict'
 
 gem 'haml-rails'
 gem 'sass-rails', '~> 4.0.1'
@@ -33,7 +33,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
-# gem 'devise', github: 'plataformatec/devise'
+gem 'devise', github: 'plataformatec/devise'
 
 gem 'pry-rails'
 gem 'rails_12factor'
