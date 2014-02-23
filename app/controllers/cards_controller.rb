@@ -25,12 +25,14 @@ class CardsController < ApplicationController
   # POST /cards
   # POST /cards.json
   def create
+    line_num = card_params.delete(:line_num).to_i
+
     @deck = Deck.find(params[:deck_id])
     @card = @deck.cards.build(card_params)
 
     respond_to do |format|
       if @card.save
-        format.html { redirect_to @card, notice: 'Card was successfully created.' }
+        format.html { redirect_to card_builder_for_deck_and_text_line_path(@deck, line_num+1), notice: 'Card was successfully created.' }
         format.json { render action: 'show', status: :created, location: @card }
       else
         format.html { render action: 'new' }
@@ -71,7 +73,7 @@ private
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def card_params
-    params.require(:card).permit(:front, :back, :deck_id)
+    params.require(:card).permit(:front, :back, :line_num)
   end
 
   def prepare_card

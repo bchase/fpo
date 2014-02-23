@@ -15,7 +15,7 @@ Feature:
     When I press "Yes"
     # And I click "沒說的"
     And I press "沒"
-    And I press "All"
+    And I press "Use All"
     And I press "Target"
     And I press "Create Card"
     Then I should see "攢着是因為想寫成歌"

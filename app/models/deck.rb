@@ -3,4 +3,6 @@ class Deck < ActiveRecord::Base
 
   has_one :text
   accepts_nested_attributes_for :text
+
+  has_many :cards
 end
