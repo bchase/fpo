@@ -9,7 +9,8 @@
           = App::NAME
           %span.label.label-info alpha
 
-        %ul.nav
-          %li= link_to "Decks", decks_path
+        - if current_user
+          %ul.nav
+            %li= link_to "Decks", decks_path
 
         = render partial: 'home/login'
