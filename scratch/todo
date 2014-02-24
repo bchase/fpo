@@ -2,18 +2,14 @@
     [*] feature passing (poltergeist not playing along)
 
     [\] card creator UI
-      [X] card front
-        [\] label
-        [\] use something other than .well ?
       [ ] style accordion glosses
-    [ ] force scrollbar
 
   [ ] deck CRUD
-    [X] export anki btn
     [ ] view cards
     [ ] anki feature passing
     [ ] feature passing
 
+  [ ] force scrollbar on card builder
   [ ] mongo for zhdict
   [ ] rename accordion_entry partials
   [ ] fix mobile CSS (top nav pushed down)
