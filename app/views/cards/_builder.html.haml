@@ -1,9 +1,13 @@
-#front.well
-  - @char_num = 0 # TODO elsewhere
-  - @line.each_char_with_entries do |char, entries|
-    - @char_num += 1 
-    - @char, @entries = char, entries
-    -# %span.char-wrapper
-      -# %button.char.btn{data: {toggle: 'modal', target: "#char#{char.object_id}"}}= char
-    %span.char{data: {toggle: 'modal', target: "#char#{char.object_id}"}}= char
-    = render 'cards/entry_modal'
+
+#front
+  %fieldset
+    %legend Card Front:
+    .well
+      - @char_num = 0 # TODO elsewhere
+      - @line.each_char_with_entries do |char, entries|
+        - @char_num += 1 
+        - @char, @entries = char, entries
+        -# %span.char-wrapper
+          -# %button.char.btn{data: {toggle: 'modal', target: "#char#{char.object_id}"}}= char
+        %span.char{data: {toggle: 'modal', target: "#char#{char.object_id}"}}= char
+        = render 'cards/entry_modal'
