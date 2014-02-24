@@ -1,1 +1,1 @@
-App::NAME = 'App'
+App::NAME = 'CardBuilder'

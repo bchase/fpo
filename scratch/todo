@@ -2,9 +2,9 @@
     [*] feature passing (poltergeist not playing along)
 
     [\] card creator UI
-      [ ] card front
-        [ ] label
-        [ ] use something other than .well ?
+      [X] card front
+        [\] label
+        [\] use something other than .well ?
       [ ] style accordion glosses
     [ ] force scrollbar
 
@@ -16,19 +16,6 @@
 
   [ ] mongo for zhdict
   [ ] rename accordion_entry partials
-
-
-
-
-
-
-
-
-
-
-
-
-
   [ ] fix mobile CSS (top nav pushed down)
   [ ] dependent destroys  
   [ ] secret key to env var
